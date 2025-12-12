@@ -298,4 +298,4 @@ Terminal 2 → Frontend:
 cd frontend
 npm run dev
 
-🟣 Want a single scrip
+🟣 Want a single scrip"# AI-Finance-Market-Intelligence" 
