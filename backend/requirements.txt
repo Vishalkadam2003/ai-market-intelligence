@@ -10,3 +10,4 @@ requests
 yfinance
 passlib[bcrypt]
 python-multipart
+scikit-learn
