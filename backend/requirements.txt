@@ -11,3 +11,10 @@ yfinance
 passlib[bcrypt]
 python-multipart
 scikit-learn
+feedparser
+numpy
+pandas
+httpx
+aiohttp
+transformers
+torch
