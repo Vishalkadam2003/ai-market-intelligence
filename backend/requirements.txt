@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+bcrypt
+python-jose[cryptography]
+python-dotenv
+apscheduler
+requests
+yfinance
+passlib[bcrypt]
+python-multipart
