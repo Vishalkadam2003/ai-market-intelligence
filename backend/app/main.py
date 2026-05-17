@@ -54,8 +54,9 @@ app.add_middleware(
 # -------------------------------------------------
 # Static Files
 # -------------------------------------------------
+import os
+os.makedirs("app/static", exist_ok=True)
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
-
 # -------------------------------------------------
 # Routers
 # -------------------------------------------------
