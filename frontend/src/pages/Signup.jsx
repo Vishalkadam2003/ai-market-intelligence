@@ -14,7 +14,7 @@ export default function Signup() {
     setError(""); setSuccess("");
 
     try {
-      const res = await fetch("http://localhost:8000/api/auth/signup", {
+      const res = await fetch("https://ai-market-intelligence-backend.onrender.com/api/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ full_name, email, password }),
