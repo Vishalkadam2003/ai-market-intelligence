@@ -40,11 +40,13 @@ Base.metadata.create_all(bind=engine)
 # -------------------------------------------------
 app.add_middleware(
     CORSMiddleware,
-allow_origins=[
-    "http://localhost:5173",
-    "http://localhost:5174",
-    "https://ai-market-intelligence-phi.vercel.app",
-],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://localhost:5174",
+        "https://ai-market-intelligence-phi.vercel.app",
+        "https://ai-market-intelligence-git-main-vishals-projects-9c83c1e7.vercel.app",
+        "https://ai-market-intelligence-lkhpi9k9z-vishals-projects-9c83c1e7.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
