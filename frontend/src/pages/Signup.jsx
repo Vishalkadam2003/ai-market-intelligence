@@ -53,26 +53,26 @@ export default function Signup() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="bg-white p-10 rounded-2xl shadow-xl w-96">
-        <h2 className="text-3xl font-bold mb-6 text-center">
+    <div className="min-h-screen flex items-center justify-center bg-black">
+      <div className="bg-gray-900 p-10 rounded-2xl shadow-xl w-96">
+        <h2 className="text-3xl font-bold mb-6 text-center text-white">
           Signup
         </h2>
 
         {error && (
-          <p className="text-red-600 text-center mb-3">
+          <p className="text-red-500 text-center mb-3">
             {error}
           </p>
         )}
 
         {success && (
-          <p className="text-green-600 text-center mb-3">
+          <p className="text-green-500 text-center mb-3">
             {success}
           </p>
         )}
 
         <input
-          className="w-full mb-4 border rounded px-4 py-2"
+          className="w-full mb-4 border rounded px-4 py-2 bg-gray-800 text-white"
           placeholder="Full Name"
           value={full_name}
           onChange={(e) => setName(e.target.value)}
@@ -80,7 +80,7 @@ export default function Signup() {
 
         <input
           type="email"
-          className="w-full mb-4 border rounded px-4 py-2"
+          className="w-full mb-4 border rounded px-4 py-2 bg-gray-800 text-white"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -88,7 +88,7 @@ export default function Signup() {
 
         <input
           type="password"
-          className="w-full mb-4 border rounded px-4 py-2"
+          className="w-full mb-4 border rounded px-4 py-2 bg-gray-800 text-white"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -101,9 +101,9 @@ export default function Signup() {
           Create Account
         </button>
 
-        <p className="text-center mt-5 text-sm">
+        <p className="text-center mt-5 text-sm text-white">
           Already have an account?{" "}
-          <Link className="text-blue-700" to="/login">
+          <Link className="text-blue-400" to="/login">
             Login
           </Link>
         </p>
