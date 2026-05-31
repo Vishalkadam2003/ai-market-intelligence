@@ -2,11 +2,10 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
-DATABASE_URL = os.environ["DATABASE_URL"]
-
-# Fix for render.com - replace postgres:// with postgresql://
-if DATABASE_URL.startswith("postgres://"):
-    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
+DATABASE_URL = os.environ.get(
+    "DATABASE_URL",
+    "postgresql://postgres:Vishal123%40@localhost:5432/ai_market_db"
+)
 
 engine = create_engine(DATABASE_URL)
 
