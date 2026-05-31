@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const API = axios.create({
-  baseURL: "http://localhost:8000/api",
+  baseURL: "https://ai-market-intelligence-backend.onrender.com/api",
 });
