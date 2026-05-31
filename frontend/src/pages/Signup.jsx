@@ -17,13 +17,20 @@ export default function Signup() {
       const res = await fetch("https://ai-market-intelligence-backend.onrender.com/api/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ full_name, email, password }),
-      });
+        body: JSON.stringify({
+          username: full_name,
+          email,
+          password
+        }),
 
       const data = await res.json();
 
       if (!res.ok) {
-        setError(data.detail);
+        setError(
+  typeof data.detail === "string"
+    ? data.detail
+    : JSON.stringify(data.detail)
+);
         return;
       }
 
