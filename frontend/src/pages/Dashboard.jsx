@@ -56,10 +56,10 @@ export default function Dashboard() {
     async function loadKPI() {
       try {
         const [liveRes, histRes, signalRes, sentRes] = await Promise.all([
-          fetch(`http://localhost:8000/api/live-price/${selectedSymbol}`),
-          fetch(`http://localhost:8000/api/prices/${selectedSymbol}`),
-          fetch(`http://localhost:8000/api/signals/${selectedSymbol}`),
-          fetch(`http://localhost:8000/api/sentiment/${selectedSymbol}`),
+          fetch(`https://ai-market-intelligence-backend.onrender.com/api/live-price/${selectedSymbol}`),
+          fetch(`https://ai-market-intelligence-backend.onrender.com/api/prices/${selectedSymbol}`),
+          fetch(`https://ai-market-intelligence-backend.onrender.com/api/signals/${selectedSymbol}`),
+          fetch(`https://ai-market-intelligence-backend.onrender.com/api/sentiment/${selectedSymbol}`),
         ]);
 
         const live = await liveRes.json();
